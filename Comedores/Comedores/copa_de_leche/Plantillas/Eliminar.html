@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Escuelas</title>
+    <style>
+        #encabezado {
+            width: 100%;
+            height: 10%;
+            background-color: cadetblue;
+
+        }
+        #cuerpo {
+            height: 400px;
+            overflow: scroll;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    {% include "barra.html" %}
+
+    <h1 style="background-color: darkslategray; text-align: center; padding-top: 45px;">UNIDAD DE PROYECTOS ESPECIALES - UPPE</h1>
+    <h2 style="background-color:slategrey; text-align: center; color:darkslateblue; padding-top: 5px;">COMEDORES:     MODULO DE ELIMINACION DE ESCUELAS </h2>
+    
+
+    <div id="contenedor" name="contenedor" >
+
+        <div id="encabezado" >
+            {% include "eliminar_f1.html" %}
+
+            {% include "eliminar_f2.html" %}
+
+        </div>
+
+        <div id="cuerpo">
+
+            {% include "tabla.html" %}
+
+        </div>
+
+
+
+    </div>
+    
+</body>
+</html>

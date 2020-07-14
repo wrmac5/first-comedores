@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        
+        #tabla_lista {
+            bottom: burlywood; 
+            overflow: scroll;
+            height: 550px;
+            width: 100%;
+            align-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            
+
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <table id="tabla_lista" >
+
+        <caption style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: black;">Datos de las Instituciones Educativas</caption>
+
+        <thead style="background-color: darkred;color: blanchedalmond;font-size: 12px;">
+
+            <tr>
+            <th>Id</th>
+            <th style="width: 20%;">Escuela</th>
+            <th>CUE</th>
+            <th>Delegacion</th>
+            <th>Localidad</th>
+            <th>Nivel</th>
+            <th>Modalidad</th>
+            <th>Cuenta N°</th>
+            <th>Responsable</th>
+            <th>DNI</th>
+            <th>SUB-Responsable</th>
+            <th>DNI</th>
+            <th>RESO</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody >
+            {% for reg in lista %}
+            <tr style="font-size: 11px; background-color: wheat; vertical-align: 3px;">
+                <td>{{ reg.id }}</td>
+                <td>{{ reg.establecimiento }}</td>
+                <td>{{ reg.cue }}</td>
+                <td>{{ reg.delegacion }}</td>
+                <td>{{ reg.localidad }}</td>
+                <td>{{ reg.nivel }}</td>
+                <td>{{ reg.modalidad }}</td>
+                <td>{{ reg.nro_cuenta }}</td>
+                <td>{{ reg.responsable }}</td>
+                <td>{{ reg.responsable_dni }}</td>
+                <td>{{ reg.sub_responsable }}</td>
+                <td>{{ reg.sub_responsable_dni }}</td>
+                <td>{{ reg.reso }}</td>
+
+            </tr>
+            {% endfor %}
+           
+            
+        </tbody>
+
+        </table>
+</body>
+</html>

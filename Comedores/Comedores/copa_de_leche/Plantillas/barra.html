@@ -1,0 +1,81 @@
+<html>
+
+
+    <header>
+        
+
+        <nav>
+            <ul>
+                <li><a href="comedores">Listar</a></li>
+                <li><a href="ingresar">Agregar</a></li>
+                <li><a href="modificar_f1">Modificar</a></li>
+                <li><a href="eliminar_f1">Eliminar</a></li>
+                <li><a href="responsable">Responsables-Sub</a>
+                <li><a href="contacto">Contacto</a>
+                    
+                </li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    
+    <style>
+           /*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            
+                     
+
+        header {
+                background: rgba(0,0,0,0.9);
+                width: 100%;
+                position: fixed;
+                z-index: 100;
+            }
+            nav {
+                float: left; /* Desplazamos el nav hacia la izquierda */
+            }
+            
+            nav ul {
+                list-style: none;
+                overflow: hidden; /* Limpiamos errores de float */
+            }
+
+            
+            nav ul li {
+                float: left;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+            }
+           
+            nav ul li a {
+                display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+                padding: 15px;
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            
+            nav ul li:hover {
+                background: #3ead47;
+                
+            }
+            
+            .wrapper {
+                width: 80%;
+                margin: auto;
+                overflow:hidden;
+            }
+        
+
+
+       </style>
+    </head>
+
+   
+
+
+</html>

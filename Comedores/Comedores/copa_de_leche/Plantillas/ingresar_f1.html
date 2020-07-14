@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #form1 {
+            box-sizing: border-box;
+            height: 90px;
+            width: 100%;
+            padding-top: 0%;
+            border-radius: 10px;
+            margin: auto;
+            background-color: #ccc;
+        }
+        
+        #form1 label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            display: inline-block;
+            color: black;
+        }
+        
+        #form1 input {
+            margin-right: 1%;
+            margin-top: 1%;
+            height: 22%;
+            border: 1px solid #f6f6f6;
+            border-radius: 3px;
+            background-color: #f6f6f6;
+            margin-right: 1%;
+            display: inline-block;
+        }
+        
+        #form1 input[type="submit"] {
+            width: 10%;
+            height: 28%;
+            margin-left: 1%;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: inline-block;
+            color: #fff;
+            background-color: rgb(19, 56, 30);
+        }
+        
+        #form1 input[type="button"] {
+            width: 8%;
+            height: 28%;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: inline-block;
+            color: white;
+            background-color: rgb(173, 78, 10);
+        }
+        
+        #form1 input:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function limpiarFormulario() {
+            var porElementos = document.forms["form1"].elements[1].value = "";
+            var porElementos = document.forms["form1"].elements[2].value = "";
+            var porElementos = document.forms["form1"].elements[3].value = "";
+            var porElementos = document.forms["form1"].elements[4].value = "";
+            var porElementos = document.forms["form1"].elements[5].value = "";
+            var porElementos = document.forms["form1"].elements[6].value = "";
+            var porElementos = document.forms["form1"].elements[7].value = "";
+            var porElementos = document.forms["form1"].elements[8].value = "";
+            var porElementos = document.forms["form1"].elements[9].value = "";
+            var porElementos = document.forms["form1"].elements[10].value = "";
+            var porElementos = document.forms["form1"].elements[11].value = "";
+            var porElementos = document.forms["form1"].elements[12].value = "";
+
+        }
+    </script>
+</head>
+
+<body>
+    <form id="form1" name="form1" action="" method="post">
+        {% csrf_token %}
+        <label id="lbl1" name="lblescuela" for="txtescuela">Escuela:</label>
+        <input id="txtescuela" name="txtescuela" type="text" maxlength="60" value="" style="width: 230px;" />
+
+
+        <label id="lblcue" name="lblcue" for="txtcue">CUE:</label>
+        <input id="txtcue" name="txtcue" type="text" maxlength="9" value="" style="width: 65px;" />
+
+        <label id="lbldelegacion" name="lbldelegacion" for="txtdelegacion">Delegacion:</label>
+        <input id="txtdelegacion" name="txtdelegacion" type="text" maxlength="30" value="" style="width: 110px;" />
+
+        <label id="lbllocaliad" name="lbllocaliad" for="txtlocalidad">Localidad:</label>
+        <input id="txtlocalidad" name="txtlocalidad" type="text" maxlength="30" value="" style="width: 110px;" />
+
+        <label id="lblnivel" name="lblnivel" for="txtnivel">Nivel:</label>
+        <input id="txtnivel" name="txtnivel" type="text" maxlength="20" value="" style="width: 90px;" />
+
+
+        <label id="lblmodalidad" name="lblmodalidad" for="txtmodalidad">Modalidad:</label>
+        <input id="txtmodalidad" name="txtmodalidad" type="text" maxlength="20" value="" style="width: 80px;" />
+
+        <label id="lblnro_cuenta" name="lblnro_cuenta" for="txtnro_cuenta">Nro de Cuenta:</label>
+        <input id="txtnro_cuenta" name="txtnro_cuenta" type="text" maxlength="8" value="" style="width: 90px;" />
+
+        <label id="lblresponsable" name="lblresponsable" for="txtresponsable">Responsable:</label>
+        <input id="txtresponsable" name="txtresponsable" type="text" maxlength="30" value="" style="width: 180px;" />
+
+        <label id="lblres_dni" name="lblres_dni" for="txtres_dni">DNI...:</label>
+        <input id="txtres_dni" name="txtres_dni" type="text" maxlength="10" value="" style="width: 90px;" />
+
+        <label id="lblsub_res" name="lblsub_res" for="txtsub_res">Sub Responsable:</label>
+        <input id="txtsub_res" name="txtsub_res" type="text" maxlength="30" value="" style="width: 180px;" />
+
+        <label id="lblsub_res_dni" name="lblsub_res_dni" for="txtsub_res_dni">DNI...:</label>
+        <input id="txtsub_res_dni" name="txtsub_res_dni" type="text" maxlength="10" value="" style="width: 90px;" />
+
+        <label id="lblreso" name="lblreso" for="txtreso">Reso:</label>
+        <input id="txtreso" name="txtreso" type="text" maxlength="6" value="" style="width: 90px;" />
+        <input type="submit" id="btnSubmit" name="btnSubmit" value="Ingresar" />
+        <input type="button" id="button" onclick="limpiarFormulario()" value="Cancelar" />
+    </form>
+</body>
+
+</html>

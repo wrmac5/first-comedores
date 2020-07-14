@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #modificar_f1 {
+            margin-top: 3px;
+            /*margin-left: 4%;*/
+            margin: 0%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            height: 50px;
+            width: 400px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            background-color:darkred;
+        }
+        #lblcue {
+            color: white;
+        }
+        #txtcue {
+            height: 20px;
+            border-radius: 5px;
+            margin-top: 5%;
+            
+        }
+        #btnSubmit {
+            width: 23%;
+            margin-left: 5%;
+            box-sizing: border-box;
+            border-radius: 10px;
+            background-color: steelblue;
+            border:1px solid #000;
+
+
+        }
+
+    </style>
+</head>
+<body>
+    
+
+
+    <form id="modificar_f1" name="modificar_f1" action= "eliminar_f1" method="post">
+        {% csrf_token %}
+        <label id="lblcue" name="lblcue" for="txtcue" >ID_ESCUELA:</label>
+        <input id="txtcue" name="txtcue" type="text" value=""/>
+
+
+        <input type="submit" id="btnSubmit" name="btnSubmit" value="Buscar"/>
+        
+    </form>
+</body>
+</html>

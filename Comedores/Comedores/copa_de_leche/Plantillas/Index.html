@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {% block title%} {% endblock %}
+    <style>
+        #div2 {
+            height: 90px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: darkslategray;
+            font-weight: bold;
+            color: white;
+            padding: 2 2 2 2px;
+            border: 2px solid #5878ca;
+        }
+        
+        #div1 {
+            margin-top: 4px;
+            width: 100%;
+            height: 400px;
+            overflow: scroll;
+        }
+    </style>
+
+
+</head>
+
+<body style="background-color: darkgrey;">
+    {% include "barra.html" %}
+    <h1 style="background-color:darkgreen; color: orange; text-align: center; padding-top: 50px;">UNIDAD DE PROGRAMAS Y PROYECTOS ESPECIALES - UPPE</h1>
+    <h2 style="background-color: forestgreen;color:palegreen; text-align: center; padding-top: 15px;">COMEDORES</h2>
+
+
+    <div id="div2">
+        <h4 style="padding-left: 25px;"> Buscar por:</h4>
+
+        {% include "form_consulta.html" %}
+
+    </div>
+    <div id="div1">
+
+        {% include "tabla.html" %}
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altas de Escuelas</title>
+    <style>
+        #frm_ingreso {
+            
+            box-sizing: border-box;
+            height: 350px;
+            width:100%;
+            padding:0px;
+            border-radius:10px;
+            
+            background-color:#ccc;
+            overflow: hidden;
+                        
+        }
+        #frm_ingreso label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            padding-left: 2%;
+            font-weight:bold;
+            float: left;
+            color: black;
+            
+        }
+        #frm_ingreso input[type="text"]{
+                       
+            width: 100%;
+            padding:3px 5px;
+            border:1px solid #f6f6f6;
+            border-radius:3px;
+            background-color:#f6f6f6;
+            
+            
+            float: left;
+            
+            
+        }
+        #frm_ingreso input[type="submit"]{
+            width:15%;
+            height: 8%;
+            margin-top: 1%;
+            margin-left: 5%;
+            border:1px solid #000;
+            border-radius:5px;
+            
+            color:#fff;
+            background-color:rgb(19, 56, 30);
+            
+
+            
+        } 
+
+        #frm_ingreso input:hover{
+            cursor:pointer;
+        }
+        
+        
+        
+        
+        
+    </style>
+   
+</head>
+<body style="background-color: darkgray;">
+    {% include "barra.html" %}
+
+    <h1 style="background-color: darkslategray; text-align: center; padding-top: 4%;">UNIDAD DE PROYECTOS ESPECIALES - UPPE</h1>
+    <h2 style="background-color:slategrey; text-align: center; color:darkslateblue; padding-top: 1%;">COMEDORES:     MODULO DE INGRESO DE ESCUELAS </h2>
+    
+        
+        
+    <div id="contenedor" style="height: 500px;  overflow: scroll; padding:0%;">   
+        <div id="div1" style="width: 100%; height: 100px; float: left">
+
+            {% include "ingresar_f1.html" %}
+            
+          
+           
+        </div>
+        <div id="div2" name="div2" style="padding-top: 0%;">
+
+            {% include "tabla.html" %}
+
+
+        </div>
+
+
+
+    </div>
+          
+
+        
+        
+
+
+</body>
+</html>

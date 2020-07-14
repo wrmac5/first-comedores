@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #form1 {
+
+            box-sizing: border-box;
+            height: 60px;
+            width:100%;
+            padding:8px;
+            border-radius:10px;
+            border: 1px;
+            border-color: #000;
+            margin:auto;
+            background-color:#ccc;
+        }
+        #form1 label {
+            
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-weight:bold;
+            display:inline-block;
+            color: black;
+        }
+        #form1 input {
+            margin-top: 3px;
+            padding:3px 5px;
+            border:1px solid #f6f6f6;
+            border-radius:3px;
+            background-color:#f6f6f6;
+            margin-right: 1%;
+            display:inline-block;
+        }
+        #form1 input[type="submit"]{
+            width:9%;
+            
+            
+            border:1px solid #000;
+            border-radius:5px;
+            display:inline-block;
+            color:#fff;
+            background-color:rgb(19, 56, 30);
+        } 
+
+        #form1 input:hover{
+            cursor:pointer;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <form id="form1" name="form1" action= "buscar" method="post">
+        {% csrf_token %}
+        <label id="lbl1" name="lblescuela" for="txtescuela">Escuela:</label>
+        <input id="txtescuela" name="txtescuela" type="text" value="" style="width: 230px;"/>
+
+
+        <label id="lblcue" name="lblcue" for="txtcue">CUE:</label>
+        <input id="txtcue" name="txtcue" type="text" value="" style="width: 60px;"/>
+
+        <label id="lbldelegacion" name="lbldelegacion" for="txtdelegacion">Delegacion:</label>
+        <input id="txtdelegacion" name="txtdelegacion" type="text" value="" style="width: 110px;"/>
+
+        <label id="lbllocaliad" name="lbllocaliad" for="txtlocalidad">Localidad:</label>
+        <input id="txtlocalidad" name="txtlocalidad" type="text" value="" style="width: 110px;"/>
+
+        <label id="lblnivel" name="lblnivel" for="txtnivel">Nivel...:</label>
+        <input id="txtnivel" name="txtnivel" type="text" value="" style="width: 90px;"/>
+
+        <label id="lblmodalidad" name="lblmodalidad" for="txtmodalidad">Modalidad:</label>
+        <input id="txtmodalidad" name="txtmodalidad" type="text" value="" style="width: 80px;"/>
+
+        
+        
+        <input type="submit" id="btnSubmit" name="btnSubmit" value="Buscar"/>
+        
+    </form>
+</body>
+</html>

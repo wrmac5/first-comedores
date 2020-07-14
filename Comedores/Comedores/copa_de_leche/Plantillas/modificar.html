@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta Id="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizacion</title>
+    <style>
+        #contenedor {
+            padding-left: 10px;
+            padding-top: 50px;
+            overflow: hidden;
+        }
+        
+        #container {
+            padding: 0;
+            float: left;
+        }
+        
+        #div2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font: bold;
+            text-align: center;
+            font-size: 11px;
+            margin: 10px;
+            height: 80px;
+            width: 400px;
+            background-color: rgb(199, 193, 221);
+            border-radius: 10px;
+            border-style: groove;
+            margin-top: 1%;
+        }
+        
+        #div3 {
+            margin: 10px;
+        }
+        
+        #div1 {
+            overflow: scroll;
+            height: 520px;
+            width: 900px;
+            float: left;
+            border-style: groove;
+
+        }
+        
+        #frm_modificacion {
+            box-sizing: border-box;
+            height: 430px;
+            width: 400px;
+            padding: 10px;
+            border-radius: 10px;
+            margin: auto;
+            background-color: rgb(187, 159, 147);
+            border-style: groove;
+            margin-top: 1%;
+        }
+        
+        #frm_modificacion label {
+            width: 60px;
+            margin: 4px 2px 2px 2px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            display: inline-block;
+            color: black;
+        }
+        
+        #frm_modificacion input {
+            width: 70%;
+            padding: 3px 5px;
+            border: 1px solid #181616;
+            border-radius: 3px;
+            background-color: #f6f6f6;
+            margin-top: 1%;
+            margin-left: 5%;
+            display: inline-block;
+        }
+        
+        #frm_modificacion input[type="submit"] {
+            width: 30%;
+            padding: 6px 14px;
+            margin-top: 15px;
+            margin-left: 20%;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: inline-block;
+            color: #fff;
+            background-color: rgb(19, 56, 30);
+            align-items: center;
+        }
+        
+        #frm_modificacion input[type="button"] {
+            width: 25%;
+            padding: 6px 14px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: inline-block;
+            color: #fff;
+            background-color: cadetblue;
+            align-items: center;
+        }
+        
+        #frm_modificacion input:hover {
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function limpiarFormulario() {
+            var porElementos = document.forms["frm_modificacion"].elements[1].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[2].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[3].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[4].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[5].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[6].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[7].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[8].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[9].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[10].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[11].value = "";
+            var porElementos = document.forms["frm_modificacion"].elements[12].value = "";
+
+        }
+    </script>
+</head>
+
+<body style="background-color: darkgrey;">
+    {% include "barra.html" %}
+
+
+    <div id="contenedor">
+        <h1 style="text-align: center;">PAGINA DE ACTUALIZACION DE INSTITUCIONES</h1>
+
+
+
+
+        <div id="container">
+
+            <div id="div2" Id="div2">
+                <caption>Establecimiento a Modificar</caption>
+                {% include "modificar_f1.html" %}
+
+            </div>
+
+            <div Id="div3">
+                <form id="frm_modificacion" Id="frm_modificacion" action="modificar" method="post">
+                    {% csrf_token %}
+                    <label id="lblid" Id="lblid" for="txtid">Id:</label>
+                    <input id="txtid" Id="txtid" name="txtid" type="text" readonly="True" value="{{registro.id}}" />
+
+                    <label id="lblescuela" Id="lblescuela" for="txtescuela">Escuela:</label>
+                    <input id="txtescuela" Id="txtescuela" name="txtescuela" type="text" value="{{registro.establecimiento}}" />
+
+                    <label id="lblcue" Id="lblcue" for="txtcue">Cue:</label>
+                    <input id="txtcue" Id="txtcue" name="txtcue" type="text" value="{{registro.cue}}" />
+
+                    <label id="lbldelegacion" Id="lbldelegacion" for="txtdelegacion">Delegacion:</label>
+                    <input id="txtdelegacion" Id="txtdelegacion" name="txtdelegacion" type="text" value="{{registro.delegacion}}" />
+
+                    <label id="lbllocalidad" Id="lbllocalidad" for="txtlocalidad">Localidad:</label>
+                    <input id="txtlocalidad" Id="txtlocalidad" name="txtlocalidad" type="text" value="{{registro.localidad}}" />
+
+                    <label id="lblnivel" Id="lblnivel" for="txtnivel">Nivel:</label>
+                    <input id="txtnivel" Id="txtnivel" name="txtnivel" type="text" value="{{registro.nivel}}" />
+
+                    <label id="lblcuenta" Id="lblcuenta" for="txtnro_cuenta">Cuenta Nro:</label>
+                    <input id="txtnro_cuenta" Id="txtnro_cuenta" name="txtnro_cuenta" type="text" value="{{registro.nro_cuenta}}" />
+
+                    <label id="lblrespon" Id="lblrespon" for="txtresponsable">Responsable:</label>
+                    <input id="txtresponsable" Id="txtresponsable" name="txtresponsable" type="text" value="{{registro.responsable}}" />
+
+                    <label id="lbldni" Id="lbldni" for="txtdni">DNI:</label>
+                    <input id="txtdni" Id="txtdni" name="txtdni" type="text" value="{{registro.responsable_dni}}" />
+
+                    <label id="lblsubres" Id="lblsubres" for="txtsub_res">Sub Responsable:</label>
+                    <input id="txtsub_res" Id="txtsub_res" name="txtsub_res" type="text" value="{{registro.sub_responsable}}" />
+                    <label id="lblsubdni" Id="lblsubdni" for="txtsub_res_dni">Sub Resp_Dni:</label>
+                    <input id="txtsub_res_dni" Id="txtsub_res_dni" name="txtsub_res_dni" type="text" value="{{registro.sub_responsable_dni}}" />
+
+                    <label id="lblreso" Id="lblreso" for="txtreso">Reso:</label>
+                    <input id="txtreso" Id="txtreso" name="txtreso" type="text" value="{{registro.reso}}" />
+                    <input type="submit" value="Actualizar">
+                    <input type="button" id="button" onclick="limpiarFormulario()" value="Cancelar">
+
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div id="div1" Id="div1">
+            {% include "tabla.html" %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
